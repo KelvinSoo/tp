@@ -15,14 +15,14 @@ import seedu.unify.model.task.exceptions.PersonNotFoundException;
  * A list of persons that enforces uniqueness between its elements and does not allow nulls.
  * A task is considered unique by comparing using {@code Person#isSamePerson(Person)}. As such, adding and updating of
  * persons uses Person#isSamePerson(Person) for equality so as to ensure that the task being added or updated is
- * unique in terms of identity in the UniquePersonList. However, the removal of a task uses Person#equals(Object) so
+ * unique in terms of identity in the UniqueTaskList. However, the removal of a task uses Person#equals(Object) so
  * as to ensure that the task with exactly the same fields will be removed.
  *
  * Supports a minimal set of list operations.
  *
  * @see Person#isSamePerson(Person)
  */
-public class UniquePersonList implements Iterable<Person> {
+public class UniqueTaskList implements Iterable<Person> {
 
     private final ObservableList<Person> internalList = FXCollections.observableArrayList();
     private final ObservableList<Person> internalUnmodifiableList =
@@ -79,7 +79,7 @@ public class UniquePersonList implements Iterable<Person> {
         }
     }
 
-    public void setPersons(UniquePersonList replacement) {
+    public void setPersons(UniqueTaskList replacement) {
         requireNonNull(replacement);
         internalList.setAll(replacement.internalList);
     }
@@ -112,8 +112,8 @@ public class UniquePersonList implements Iterable<Person> {
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
-                || (other instanceof UniquePersonList // instanceof handles nulls
-                        && internalList.equals(((UniquePersonList) other).internalList));
+                || (other instanceof UniqueTaskList // instanceof handles nulls
+                        && internalList.equals(((UniqueTaskList) other).internalList));
     }
 
     @Override
