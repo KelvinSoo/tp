@@ -1,34 +1,34 @@
 package seedu.unify.testutil;
 
-import seedu.unify.model.AddressBook;
+import seedu.unify.model.TaskList;
 import seedu.unify.model.task.Person;
 
 /**
  * A utility class to help with building Addressbook objects.
  * Example usage: <br>
- *     {@code AddressBook ab = new AddressBookBuilder().withPerson("John", "Doe").build();}
+ *     {@code TaskList ab = new AddressBookBuilder().withPerson("John", "Doe").build();}
  */
 public class AddressBookBuilder {
 
-    private AddressBook addressBook;
+    private TaskList taskList;
 
     public AddressBookBuilder() {
-        addressBook = new AddressBook();
+        taskList = new TaskList();
     }
 
-    public AddressBookBuilder(AddressBook addressBook) {
-        this.addressBook = addressBook;
+    public AddressBookBuilder(TaskList taskList) {
+        this.taskList = taskList;
     }
 
     /**
-     * Adds a new {@code Person} to the {@code AddressBook} that we are building.
+     * Adds a new {@code Person} to the {@code TaskList} that we are building.
      */
     public AddressBookBuilder withPerson(Person person) {
-        addressBook.addPerson(person);
+        taskList.addTask(person);
         return this;
     }
 
-    public AddressBook build() {
-        return addressBook;
+    public TaskList build() {
+        return taskList;
     }
 }

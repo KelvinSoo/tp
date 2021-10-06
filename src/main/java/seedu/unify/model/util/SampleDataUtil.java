@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import seedu.unify.model.AddressBook;
-import seedu.unify.model.ReadOnlyAddressBook;
+import seedu.unify.model.TaskList;
+import seedu.unify.model.ReadOnlyTaskList;
 import seedu.unify.model.tag.Tag;
 import seedu.unify.model.task.Address;
 import seedu.unify.model.task.Email;
@@ -14,7 +14,7 @@ import seedu.unify.model.task.Person;
 import seedu.unify.model.task.Phone;
 
 /**
- * Contains utility methods for populating {@code AddressBook} with sample data.
+ * Contains utility methods for populating {@code TaskList} with sample data.
  */
 public class SampleDataUtil {
     public static Person[] getSamplePersons() {
@@ -40,10 +40,10 @@ public class SampleDataUtil {
         };
     }
 
-    public static ReadOnlyAddressBook getSampleAddressBook() {
-        AddressBook sampleAb = new AddressBook();
+    public static ReadOnlyTaskList getSampleAddressBook() {
+        TaskList sampleAb = new TaskList();
         for (Person samplePerson : getSamplePersons()) {
-            sampleAb.addPerson(samplePerson);
+            sampleAb.addTask(samplePerson);
         }
         return sampleAb;
     }

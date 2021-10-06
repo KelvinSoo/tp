@@ -13,7 +13,7 @@ import seedu.unify.logic.commands.exceptions.CommandException;
 import seedu.unify.logic.parser.AddressBookParser;
 import seedu.unify.logic.parser.exceptions.ParseException;
 import seedu.unify.model.Model;
-import seedu.unify.model.ReadOnlyAddressBook;
+import seedu.unify.model.ReadOnlyTaskList;
 import seedu.unify.model.task.Person;
 import seedu.unify.storage.Storage;
 
@@ -55,7 +55,7 @@ public class LogicManager implements Logic {
     }
 
     @Override
-    public ReadOnlyAddressBook getAddressBook() {
+    public ReadOnlyTaskList getAddressBook() {
         return model.getAddressBook();
     }
 

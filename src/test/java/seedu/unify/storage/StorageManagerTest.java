@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import seedu.unify.commons.core.GuiSettings;
-import seedu.unify.model.AddressBook;
-import seedu.unify.model.ReadOnlyAddressBook;
+import seedu.unify.model.TaskList;
+import seedu.unify.model.ReadOnlyTaskList;
 import seedu.unify.model.UserPrefs;
 
 public class StorageManagerTest {
@@ -52,12 +52,12 @@ public class StorageManagerTest {
         /*
          * Note: This is an integration test that verifies the StorageManager is properly wired to the
          * {@link JsonAddressBookStorage} class.
-         * More extensive testing of UserPref saving/reading is done in {@link JsonAddressBookStorageTest} class.
+         * More extensive testing of UserPref saving/reading is done in {@link JsonTaskListStorageTest} class.
          */
-        AddressBook original = getTypicalAddressBook();
+        TaskList original = getTypicalAddressBook();
         storageManager.saveAddressBook(original);
-        ReadOnlyAddressBook retrieved = storageManager.readAddressBook().get();
-        assertEquals(original, new AddressBook(retrieved));
+        ReadOnlyTaskList retrieved = storageManager.readAddressBook().get();
+        assertEquals(original, new TaskList(retrieved));
     }
 
     @Test

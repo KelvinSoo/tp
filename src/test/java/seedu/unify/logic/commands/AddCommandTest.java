@@ -16,9 +16,9 @@ import org.junit.jupiter.api.Test;
 import javafx.collections.ObservableList;
 import seedu.unify.commons.core.GuiSettings;
 import seedu.unify.logic.commands.exceptions.CommandException;
-import seedu.unify.model.AddressBook;
+import seedu.unify.model.ReadOnlyTaskList;
+import seedu.unify.model.TaskList;
 import seedu.unify.model.Model;
-import seedu.unify.model.ReadOnlyAddressBook;
 import seedu.unify.model.ReadOnlyUserPrefs;
 import seedu.unify.model.task.Person;
 import seedu.unify.testutil.PersonBuilder;
@@ -114,12 +114,12 @@ public class AddCommandTest {
         }
 
         @Override
-        public void setAddressBook(ReadOnlyAddressBook newData) {
+        public void setAddressBook(ReadOnlyTaskList newData) {
             throw new AssertionError("This method should not be called.");
         }
 
         @Override
-        public ReadOnlyAddressBook getAddressBook() {
+        public ReadOnlyTaskList getAddressBook() {
             throw new AssertionError("This method should not be called.");
         }
 
@@ -186,8 +186,8 @@ public class AddCommandTest {
         }
 
         @Override
-        public ReadOnlyAddressBook getAddressBook() {
-            return new AddressBook();
+        public ReadOnlyTaskList getAddressBook() {
+            return new TaskList();
         }
     }
 

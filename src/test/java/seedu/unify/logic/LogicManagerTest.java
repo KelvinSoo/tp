@@ -24,7 +24,7 @@ import seedu.unify.logic.commands.exceptions.CommandException;
 import seedu.unify.logic.parser.exceptions.ParseException;
 import seedu.unify.model.Model;
 import seedu.unify.model.ModelManager;
-import seedu.unify.model.ReadOnlyAddressBook;
+import seedu.unify.model.ReadOnlyTaskList;
 import seedu.unify.model.UserPrefs;
 import seedu.unify.model.task.Person;
 import seedu.unify.storage.JsonAddressBookStorage;
@@ -155,7 +155,7 @@ public class LogicManagerTest {
         }
 
         @Override
-        public void saveAddressBook(ReadOnlyAddressBook addressBook, Path filePath) throws IOException {
+        public void saveAddressBook(ReadOnlyTaskList addressBook, Path filePath) throws IOException {
             throw DUMMY_IO_EXCEPTION;
         }
     }
