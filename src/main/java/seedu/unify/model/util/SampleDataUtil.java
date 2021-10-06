@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import seedu.unify.model.TaskList;
 import seedu.unify.model.ReadOnlyTaskList;
+import seedu.unify.model.TaskList;
 import seedu.unify.model.tag.Tag;
 import seedu.unify.model.task.Address;
 import seedu.unify.model.task.Email;

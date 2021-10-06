@@ -2,8 +2,8 @@ package seedu.unify.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.unify.model.TaskList;
 import seedu.unify.model.Model;
+import seedu.unify.model.TaskList;
 
 /**
  * Clears the address book.

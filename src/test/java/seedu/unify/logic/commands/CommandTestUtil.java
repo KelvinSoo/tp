@@ -15,8 +15,8 @@ import java.util.List;
 
 import seedu.unify.commons.core.index.Index;
 import seedu.unify.logic.commands.exceptions.CommandException;
-import seedu.unify.model.TaskList;
 import seedu.unify.model.Model;
+import seedu.unify.model.TaskList;
 import seedu.unify.model.task.NameContainsKeywordsPredicate;
 import seedu.unify.model.task.Person;
 import seedu.unify.testutil.EditPersonDescriptorBuilder;
