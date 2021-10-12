@@ -17,7 +17,6 @@ public class WeeklyPanel extends UiPart<Region> {
 
     private static final String FXML = "WeeklyPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(WeeklyPanel.class);
-    private Logic logic;
     // add date to be passed down from Weekly Panel
     private Date[] dateRange;
 
@@ -40,7 +39,6 @@ public class WeeklyPanel extends UiPart<Region> {
         LocalDate currentDay = firstDayOfWeek;
         for (int i = 0; i < 7; i++) {
             // these are just placeholders
-
             DailyPanel dailyPanel = new DailyPanel(currentDay, weeklyTaskList.getDailyTaskList(currentDay));
             currentDay = currentDay.plusDays(1);
             dailyHBox.getChildren().add(dailyPanel.getRoot());

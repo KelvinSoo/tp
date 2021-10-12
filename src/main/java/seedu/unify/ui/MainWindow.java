@@ -131,7 +131,6 @@ public class MainWindow extends UiPart<Stage> {
         // a taskList. Currently placeholder
         UniFy uniFy = new UniFy(logic.getUniFy());
         weeklyPanel = new WeeklyPanel(uniFy.getWeeklyTaskList());
-        weeklyPanelPlaceholder.getChildren().add(weeklyPanel.getRoot());
     }
 
     /**
