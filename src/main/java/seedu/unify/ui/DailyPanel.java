@@ -46,8 +46,6 @@ public class DailyPanel extends UiPart<Region> {
      */
     public ObservableList<Task> dateFilteredTasks(Date date) {
         FilteredList<Task> filteredTasks = new FilteredList<>(instance.getTaskList());
-        //filteredTasks.sort(new TaskTimeComparator());
-        //filteredTasks.setPredicate(new TaskContainsDatePredicate(date));
         filteredTasks.sort(new TaskTimeComparator());
         return filteredTasks;
     }
