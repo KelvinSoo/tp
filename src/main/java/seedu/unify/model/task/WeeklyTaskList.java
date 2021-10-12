@@ -27,7 +27,7 @@ public class WeeklyTaskList implements Iterable<Task> {
     }
 
     public LocalDate getFirstDayOfWeek(){
-        LocalDate firstDay = LocalDate.ofYearDay(2021,weekNumber * 7 - 5);
+        LocalDate firstDay = LocalDate.ofYearDay(2021,weekNumber * 7 - 3);
         return firstDay;
     }
 
