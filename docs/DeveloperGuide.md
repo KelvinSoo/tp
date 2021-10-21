@@ -235,11 +235,11 @@ The following activity diagram summarizes what happens when a user executes a ne
 _{more aspects and alternatives to be added}_
 
 
-### 3.x Find task feature
+### Find task feature
 
 The find feature enables users to find tasks by specifying part of the task name or date.
 
-#### 3.x.1 Implementation
+#### Implementation
 
 The following are the changes made to achieve this feature:
 
@@ -248,7 +248,7 @@ The following are the changes made to achieve this feature:
 * `FindCommand` class is modified to accept multiple predicate object.
 * `FindCommandParser` class is modified to parser both task name and date.
 
-Given below is a usage scenario of this feature using both name and Nric as inputs.
+Given below is a usage scenario of this feature using both name and date as inputs.
 
 Step 1. The user executes `add n/Math Quiz 5 d/2021-10-10 t/18:00 tg/Important` to add a task named Math Quiz 5 and with a deadline of 6pm, 10 October 2021.
 
@@ -262,7 +262,7 @@ Step 5. The user executes `list` command to view the full list of tasks.
 
 The sequence diagram below illustrates the interaction between Logic and Model components when the user executes `find Math d/2021-10-10` command as in Step 4.
 
-![FindSequenceDiagram](images/UML_Diagrams/FindSequenceDiagram.png)
+![FindSequenceDiagram](images/FindSequenceDiagram.png)
 
 <div markdown="block" class="alert alert-info">
 
@@ -282,9 +282,9 @@ In the **Model** Component, This is the key method invoked:
 * `Model#updateFilteredTaskList(predicate)`: `Model` uses this method to update the displayed patients list.
 
 The following activity diagram summarizes what happens when the user inputs a find command.
-![FindActivityDiagram](images/UML_Diagrams/findActivityDiagram.png)
+![FindActivityDiagram](images/FindActivityDiagram.png)
 
-#### 2.x.2 Design Consideration
+#### Design Consideration
 
 ##### Aspect: What to use as reference to find the task?
 

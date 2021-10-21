@@ -1,0 +1,14 @@
+@startuml
+start
+:User inputs find command;
+
+if () then ([valid command])
+    :System parses the provided name and date;
+    :System filters the task list;
+    :Filtered list shown to the user;
+
+else ([else])
+    :Error message displayed to the user;
+endif
+stop
+@enduml
