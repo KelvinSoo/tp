@@ -3,8 +3,6 @@ package seedu.unify.model.task;
 import java.util.List;
 import java.util.function.Predicate;
 
-import seedu.unify.commons.util.StringUtil;
-
 /**
  * Tests that a {@code Task}'s {@code Name} matches any of the keywords given.
  */
@@ -17,8 +15,11 @@ public class NameContainsKeywordsPredicate implements Predicate<Task> {
 
     @Override
     public boolean test(Task task) {
-        return keywords.stream()
-                .anyMatch(keyword -> StringUtil.containsWordIgnoreCase(task.getName().taskName, keyword));
+        boolean check = true;
+        for (String keyword:keywords) {
+            check = check && task.getName().taskName.toLowerCase().contains(keyword.toLowerCase());
+        }
+        return check;
     }
 
     @Override
